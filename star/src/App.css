@@ -1,8 +1,40 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+
+.App{
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  width: 100vw;
+  height: 98vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+.star-view{
+  background: #1a1a1a;
+  width: 45vw;
+  height: 85vh;
+
+}
+.components{
+  width: 45vw;
+  height: 85vh;
+  border-style: solid;
+  border-radius: 2px;
+  border-color: #1a1a1a;
 }
 
 .logo {

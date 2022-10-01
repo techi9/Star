@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fac98e6-38e8-4160-83aa-76987fccb8e4" name="Changes" comment="" />
+    <list default="true" id="5fac98e6-38e8-4160-83aa-76987fccb8e4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/star/src/components/starView/Scene.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/star/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/App.jsx" afterDir="false" />
+    </list>
+    <list id="b0525817-bf4b-479b-b12b-407a62437284" name="Changes by tucha" comment="">
+      <change beforePath="$PROJECT_DIR$/star/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/index.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/star/src/App.css">
+      <ranges>
+        <range start1="1" end1="5" start2="1" end2="37" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="7" end1="41" start2="39" end2="39" changelist="b0525817-bf4b-479b-b12b-407a62437284" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/star/src/App.jsx">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="b0525817-bf4b-479b-b12b-407a62437284" />
+        <range start1="5" end1="6" start2="6" end2="11" changelist="b0525817-bf4b-479b-b12b-407a62437284" />
+        <range start1="9" end1="16" start2="14" end2="16" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="17" end1="29" start2="17" end2="21" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -19,13 +56,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/star/package.json" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/star/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -34,7 +88,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664638741147</updated>
+      <workItem from="1664639146652" duration="5718000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
