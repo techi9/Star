@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fac98e6-38e8-4160-83aa-76987fccb8e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/star/src/components/starView/Scene.jsx" afterDir="false" />
+    <list default="true" id="5fac98e6-38e8-4160-83aa-76987fccb8e4" name="Changes" comment="added space scene">
+      <change afterPath="$PROJECT_DIR$/star/src/components/color/ColorSelector.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/star/src/components/color/ColorSelector.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/star/src/components/controller.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/star/src/components/controller.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/star/src/components/temperature/TemperatureBar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/star/src/components/temperature/TemperatureBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/star/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/star/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/star/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/star/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/App.jsx" afterDir="false" />
     </list>
-    <list id="b0525817-bf4b-479b-b12b-407a62437284" name="Changes by tucha" comment="">
-      <change beforePath="$PROJECT_DIR$/star/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/star/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/star/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/index.css" afterDir="false" />
+    <list id="b0525817-bf4b-479b-b12b-407a62437284" name="Changes by tucha" comment="initial settings">
+      <change beforePath="$PROJECT_DIR$/star/src/components/starView/Scene.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/components/starView/Scene.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,27 +26,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="color-selector" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/star/src/App.css">
-      <ranges>
-        <range start1="1" end1="5" start2="1" end2="37" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
-        <range start1="7" end1="41" start2="39" end2="39" changelist="b0525817-bf4b-479b-b12b-407a62437284" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/star/src/App.jsx">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="b0525817-bf4b-479b-b12b-407a62437284" />
-        <range start1="5" end1="6" start2="6" end2="11" changelist="b0525817-bf4b-479b-b12b-407a62437284" />
-        <range start1="9" end1="16" start2="14" end2="16" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
-        <range start1="17" end1="29" start2="17" end2="21" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -61,6 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/star/package.json" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -88,8 +80,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664638741147</updated>
-      <workItem from="1664639146652" duration="5718000" />
+      <workItem from="1664639146652" duration="8038000" />
     </task>
+    <task id="LOCAL-00001" summary="added space scene">
+      <created>1664644976122</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664644976122</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial settings">
+      <created>1664644998633</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664644998633</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,5 +112,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added space scene" />
+    <MESSAGE value="initial settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial settings" />
   </component>
 </project>

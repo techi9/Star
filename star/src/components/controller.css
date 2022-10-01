@@ -1,0 +1,11 @@
+.debug{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+.controller{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

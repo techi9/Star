@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import Scene from "./components/starView/Scene";
+import Controller from "./components/controller";
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
       </div>
 
        <div className="components">
-
+            <Controller/>
        </div>
     </div>
   )
