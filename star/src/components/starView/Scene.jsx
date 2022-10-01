@@ -61,9 +61,9 @@ class Scene extends Component {
         const geometry = new THREE.BufferGeometry();
         geometry.setAttribute( 'position', new THREE.BufferAttribute( arr, 3 ) );
 
-        let cloud = new THREE.Points(geometry, material);
-        cloud.rotateX(1)
-        this.scene.add(cloud);
+        this.cloud = new THREE.Points(geometry, material);
+
+        this.scene.add(this.cloud);
     }
 
 
@@ -73,10 +73,13 @@ class Scene extends Component {
         let camera = this.camera
         let renderer = this.renderer
         let scene = this.scene
+        let cloud = this.cloud
 
         let animate = () => {
             requestAnimationFrame(animate);
-
+            cloud.rotateX(0.00008)
+            cloud.rotateY(0.00005)
+            cloud.rotateZ(0.00003)
             renderer.render(scene, camera);
 
         }
