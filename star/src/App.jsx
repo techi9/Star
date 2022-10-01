@@ -1,9 +1,14 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import Scene from "./components/starView/Scene";
 
 function App() {
-  const [count, setCount] = useState(0)
+
+    let calculateSceneSizes = {
+        height: window.innerHeight / 100 * 85,
+        width: window.innerWidth / 100 * 45
+    }
 
   return (
     <div className="App">
