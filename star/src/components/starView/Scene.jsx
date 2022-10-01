@@ -77,9 +77,6 @@ class Scene extends Component {
         let animate = () => {
             requestAnimationFrame(animate);
 
-            // camera.position.x += ( mouseX - camera.position.x ) * 0.005;
-            // camera.position.y += ( - mouseY - camera.position.y ) * 0.005;
-            // camera.lookAt( scene.position );
             renderer.render(scene, camera);
 
         }
