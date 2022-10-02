@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import sunVertex from "../../starShaders/sunVertex.glsl";
-import sunFragmentRed from "../../starShaders/sunFragmentRed.glsl";
-import sunFragmentBlue from "../../starShaders/sunFragmentBlue.glsl";
+/*import sunFragmentRed from "../../starShaders/sunFragmentRed.glsl";
+import sunFragmentBlue from "../../starShaders/sunFragmentBlue.glsl";*/
 import sunFragmentYellow from "../../starShaders/sunFragmentYellow.glsl";
-import sunFragmentOrange from "../../starShaders/sunFragmentOrange.glsl";
+/*import sunFragmentOrange from "../../starShaders/sunFragmentOrange.glsl";
 import sunFragmentBrown from "../../starShaders/sunFragmentBrown.glsl";
-import sunFragmentWhite from "../../starShaders/sunFragmentWhite.glsl";
+import sunFragmentWhite from "../../starShaders/sunFragmentWhite.glsl";*/
 
 class Scene extends Component {
     constructor(props) {
@@ -42,6 +42,7 @@ class Scene extends Component {
         this.renderer.outputEncoding = THREE.sRGBEncoding;
 
         this.initStar(this.props.color)
+
     }
 
 
@@ -76,19 +77,35 @@ class Scene extends Component {
 
     initStar = (color) => {
 
-        let colorSelect = {
+        /*let colorSelect = {
             'blue': sunFragmentBlue,
             'white': sunFragmentWhite,
             'yellow': sunFragmentYellow,
             'orange': sunFragmentOrange,
             'red': sunFragmentRed,
             'brown': sunFragmentBrown
+        }*/
+        let star = {
+            'blue': {r:0.5,g:0.6,b:0.9,n:-0.3,o:+0.2},
+            'light-blue': {r:0.7,g:0.8,b:0.9,n:-0.3,o:+0.2},
+            'white': {r:0.9,g:0.9,b:0.9,n:-0.3,o:+0.2},
+            'light-yellow': {r:0.9,g:0.8,b:0.6,n:0.6,o:0.05},
+            'yellow': {r:0.8,g:0.5,b:0.1,n:0.6,o:0.05},
+            'orange': {r:0.6,g:0.30,b:0.05,n:0.6,o:0.05},
+            'red': {r:0.55,g:0.10,b:0.05,n:0.6,o:0.05},
+            'dark-red': {r:0.4,g:0.06,b:0.05,n:0.6,o:0.05},
+            'brown': {r:0.3,g:0.1,b:0.0,n:0.6,o:0.05},
         }
-
+        let starVariant = star[color]
 
         let uniforms = {
             time: 	{ type: "f", value: 1.0 },
-            scale: 	{ type: "f", value: 1.5 }
+            scale: 	{ type: "f", value: 1.5 },
+            r: { type: "f", value: starVariant.r },
+            g :{ type: "f", value: starVariant.g },
+            b :{ type: "f", value: starVariant.b },
+            noiseMult :{ type: "f", value: starVariant.n },
+            offset:{ type: "f", value: starVariant.o },
         };
         let material = new THREE.ShaderMaterial( {
             uniforms: uniforms,
@@ -113,7 +130,7 @@ class Scene extends Component {
         let oldTime = new Date().getTime();
         let time = 0
         let delta = 0
-
+        cloud.translateZ(-100)
         let animate = () => {
             requestAnimationFrame(animate);
 
