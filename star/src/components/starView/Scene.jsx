@@ -34,8 +34,6 @@ class Scene extends Component {
 
         this.starForge();
 
-
-
         this.renderer = new THREE.WebGLRenderer({alpha: true});
         this.renderer.setClearColor(0x000011, 1);
         this.renderer.setPixelRatio(window.devicePixelRatio);
@@ -43,6 +41,7 @@ class Scene extends Component {
         this.renderer.physicallyCorrectLights = true;
         this.renderer.outputEncoding = THREE.sRGBEncoding;
 
+        this.initStar(this.props.color)
     }
 
 
@@ -75,7 +74,32 @@ class Scene extends Component {
         this.scene.add(this.cloud);
     }
 
+    initStar = (color) => {
 
+        let colorSelect = {
+            'blue': sunFragmentBlue,
+            'white': sunFragmentWhite,
+            'yellow': sunFragmentYellow,
+            'orange': sunFragmentOrange,
+            'red': sunFragmentRed,
+            'brown': sunFragmentBrown
+        }
+
+
+        let uniforms = {
+            time: 	{ type: "f", value: 1.0 },
+            scale: 	{ type: "f", value: 1.5 }
+        };
+        let material = new THREE.ShaderMaterial( {
+            uniforms: uniforms,
+            vertexShader: sunVertex,
+            fragmentShader: sunFragmentYellow
+        } );
+        let size = 0.75;
+        this.star = new THREE.Mesh( new THREE.SphereGeometry( size, 64, 32 ), material );
+        this.star.scale.set(300,300,300)
+        this.scene.add( this.star );
+    }
 
     componentDidMount() {
         this.mount.appendChild(this.renderer.domElement); // mount a scene inside of React using a ref
