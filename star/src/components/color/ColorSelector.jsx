@@ -12,15 +12,15 @@ class ColorSelector extends Component{
         this.inProgress=false
         this.handleColor='#404040'
         this.borderColor = '#898989'
-        this.colorTable=[   '#7cedff',
+        this.colorTable=[   '#3d5cff',
                             /*'#d1f9ff',*/
                             '#fdfdfd',
                             /*'#fffac0',*/
-                            '#ffed76',
-                            '#ffca4e',
-                            '#ff5f46',
+                            '#ffea00',
+                            '#ea8109',
+                            '#fc0000',
                             /*'#c64d1f',*/
-                            '#994d27']
+                            '#883002']
         this.nameTable=['blue',
                         /*'light-blue',*/
                         'white',

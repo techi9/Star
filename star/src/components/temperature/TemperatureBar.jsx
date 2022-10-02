@@ -36,6 +36,9 @@ class TemperatureBar extends Component{
             'dark-red': [2000,3000],
             'brown': [1500,2000]
         }
+
+        let audioPath = "../../public/sounds/loadTemperature.wav";
+        this.audio = new Audio(audioPath);
     }
 
     // test how it works
@@ -57,7 +60,7 @@ class TemperatureBar extends Component{
 
     cursorStatus = () => {
         let num = this.progressTemperature[this.colorShine];
-        let step = (75 - num) / 75;
+        let step = (75 - num) / 45;
        if (this.state.widthCursor >= num) {
 
             this.indexCursor -= step;
@@ -73,12 +76,15 @@ class TemperatureBar extends Component{
             clearInterval(this.idProgress);
             clearInterval(this.idCursor);
         } else {
+            // if(this.audio)
+            //     this.audio.stop();
             this.indexProgress++;
             this.setState({widthProgress: this.indexProgress});
         }
     }
 
     start = () => {
+        this.audio.play();
         this.reset();
         this.idProgress = setInterval(this.progressStatus,80);
         this.idCursor = setInterval(this.cursorStatus,100);
@@ -87,17 +93,17 @@ class TemperatureBar extends Component{
     render() {
         return (  // here's your html (jsx)
             <div className="wrapper">
-                <div className="progress">
-                    <div className="progress_line-bg">
-                        <div className="progress_line" id="progress_line" style={{width: this.state.widthProgress+'%'}}>
-                            <b>
-                                {
-                                    this.state.widthProgress * 1 + '%'
-                                }
-                            </b>
-                        </div>
-                    </div>
-                </div>
+                {/*<div className="progress">*/}
+                {/*    <div className="progress_line-bg">*/}
+                {/*        <div className="progress_line" id="progress_line" style={{width: this.state.widthProgress+'%'}}>*/}
+                {/*            <b>*/}
+                {/*                {*/}
+                {/*                    this.state.widthProgress * 1 + '%'*/}
+                {/*                }*/}
+                {/*            </b>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
                 <div className="temperature">
                     <div className="cursor" id="cursor" style={{
                         height: this.state.widthCursor+'%'

@@ -4,18 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fac98e6-38e8-4160-83aa-76987fccb8e4" name="Changes" comment="added space scene">
-      <change afterPath="$PROJECT_DIR$/star/src/components/color/ColorSelector.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star/src/components/color/ColorSelector.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star/src/components/controller.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star/src/components/controller.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star/src/components/temperature/TemperatureBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star/src/components/temperature/TemperatureBar.jsx" afterDir="false" />
+    <list default="true" id="5fac98e6-38e8-4160-83aa-76987fccb8e4" name="Changes" comment="added glsl">
+      <change afterPath="$PROJECT_DIR$/star/public/sounds/loadTemperature.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/star/src/assets/cards/A.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/star/src/assets/cards/G.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/star/src/assets/cards/K.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/star/src/assets/cards/L.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/star/src/assets/cards/O.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/star/src/assets/cards/T.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/star/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/App.jsx" afterDir="false" />
-    </list>
-    <list id="b0525817-bf4b-479b-b12b-407a62437284" name="Changes by tucha" comment="initial settings">
+      <change beforePath="$PROJECT_DIR$/star/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/components/color/ColorSelector.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/components/color/ColorSelector.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/components/controller.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/components/controller.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/star/src/components/starView/Scene.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/components/starView/Scene.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/components/temperature/TemperatureBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/components/temperature/TemperatureBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/components/temperature/TemperatureBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/components/temperature/TemperatureBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/starShaders/sunFragmentYellow.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/starShaders/sunFragmentYellow.glsl" afterDir="false" />
+    </list>
+    <list id="aa6da182-cf6c-4fdf-b254-851b540b97dd" name="Changes by tucha" comment="add scripts in progress">
+      <change beforePath="$PROJECT_DIR$/star/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/components/color/ColorSelector.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/components/color/ColorSelector.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/components/controller.css" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/components/controller.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/components/controller.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/components/controller.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/components/starView/Scene.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/components/starView/Scene.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/components/temperature/TemperatureBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/components/temperature/TemperatureBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/star/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,18 +40,83 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="color-selector" />
+        <entry key="$PROJECT_DIR$" value="planets-3d" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/star/src/components/temperature/TemperatureBar.css">
+      <ranges>
+        <range start1="24" end1="37" start2="24" end2="24" changelist="aa6da182-cf6c-4fdf-b254-851b540b97dd" />
+        <range start1="38" end1="43" start2="25" end2="25" changelist="aa6da182-cf6c-4fdf-b254-851b540b97dd" />
+        <range start1="58" end1="59" start2="40" end2="41" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/star/src/components/controller.jsx">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="aa6da182-cf6c-4fdf-b254-851b540b97dd" />
+        <range start1="4" end1="4" start2="4" end2="10" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="8" end1="9" start2="14" end2="14" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="10" end1="11" start2="15" end2="17" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="13" end1="13" start2="19" end2="22" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="16" end1="16" start2="25" end2="32" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="17" end1="17" start2="33" end2="62" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="18" end1="19" start2="63" end2="64" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="20" end1="21" start2="65" end2="65" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="22" end1="25" start2="66" end2="68" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="26" end1="27" start2="69" end2="72" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="28" end1="29" start2="73" end2="73" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="30" end1="30" start2="74" end2="75" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="34" end1="39" start2="79" end2="79" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="40" end1="40" start2="80" end2="81" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="41" end1="42" start2="82" end2="93" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/star/src/components/starView/Scene.jsx">
+      <ranges>
+        <range start1="3" end1="5" start2="3" end2="5" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="6" end1="7" start2="6" end2="7" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="8" end1="9" start2="8" end2="9" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="19" end1="19" start2="19" end2="22" changelist="aa6da182-cf6c-4fdf-b254-851b540b97dd" />
+        <range start1="43" end1="45" start2="46" end2="46" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="46" end1="47" start2="47" end2="47" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="79" end1="97" start2="79" end2="89" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="98" end1="99" start2="90" end2="90" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="102" end1="108" start2="93" end2="94" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="112" end1="113" start2="98" end2="99" changelist="aa6da182-cf6c-4fdf-b254-851b540b97dd" />
+        <range start1="126" end1="127" start2="112" end2="113" changelist="aa6da182-cf6c-4fdf-b254-851b540b97dd" />
+        <range start1="128" end1="128" start2="114" end2="119" changelist="aa6da182-cf6c-4fdf-b254-851b540b97dd" />
+        <range start1="140" end1="143" start2="131" end2="136" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="148" end1="149" start2="141" end2="141" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="157" end1="168" start2="149" end2="149" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="172" end1="172" start2="153" end2="154" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/star/src/components/color/ColorSelector.jsx">
+      <ranges>
+        <range start1="14" end1="15" start2="14" end2="15" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="18" end1="21" start2="18" end2="21" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="22" end1="23" start2="22" end2="23" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="65" end1="66" start2="65" end2="69" changelist="aa6da182-cf6c-4fdf-b254-851b540b97dd" />
+        <range start1="200" end1="201" start2="203" end2="204" changelist="aa6da182-cf6c-4fdf-b254-851b540b97dd" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/star/src/index.css">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="5fac98e6-38e8-4160-83aa-76987fccb8e4" />
+        <range start1="4" end1="4" start2="5" end2="32" changelist="aa6da182-cf6c-4fdf-b254-851b540b97dd" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -58,7 +138,17 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Оля\WebstormProjects\Star\star\src\assets" />
+      <recent name="C:\Users\Оля\WebstormProjects\Star\star\public\sounds" />
+      <recent name="C:\Users\Оля\WebstormProjects\Star\star\public\cards" />
+      <recent name="C:\Users\Оля\WebstormProjects\Star\star\src" />
+      <recent name="C:\Users\Оля\WebstormProjects\Star\star\public\planet" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
@@ -80,7 +170,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664638741147</updated>
-      <workItem from="1664639146652" duration="8038000" />
+      <workItem from="1664639146652" duration="9047000" />
+      <workItem from="1664654576846" duration="6906000" />
+      <workItem from="1664703913120" duration="1199000" />
+      <workItem from="1664706576501" duration="38000" />
+      <workItem from="1664706919424" duration="224000" />
+      <workItem from="1664707173480" duration="232000" />
+      <workItem from="1664709718098" duration="1000" />
+      <workItem from="1664738226315" duration="13108000" />
     </task>
     <task id="LOCAL-00001" summary="added space scene">
       <created>1664644976122</created>
@@ -96,7 +193,49 @@
       <option name="project" value="LOCAL" />
       <updated>1664644998633</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added preparation">
+      <created>1664647419576</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664647419576</updated>
+    </task>
+    <task id="LOCAL-00004" summary="tolik deleting code as usual..">
+      <created>1664647474233</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664647474233</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added space rotation">
+      <created>1664647644655</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664647644655</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add scripts in progress">
+      <created>1664703967731</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664703967731</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added ts version">
+      <created>1664704014836</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664704014836</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added glsl">
+      <created>1664704072016</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664704072016</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,10 +251,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added space scene" />
     <MESSAGE value="initial settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial settings" />
+    <MESSAGE value="added preparation" />
+    <MESSAGE value="tolik deleting code as usual.." />
+    <MESSAGE value="added space rotation" />
+    <MESSAGE value="add scripts in progress" />
+    <MESSAGE value="added ts version" />
+    <MESSAGE value="added glsl" />
+    <option name="LAST_COMMIT_MESSAGE" value="added glsl" />
   </component>
 </project>

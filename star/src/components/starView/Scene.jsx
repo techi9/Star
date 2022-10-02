@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import sunVertex from "../../starShaders/sunVertex.glsl";
-/*import sunFragmentRed from "../../starShaders/sunFragmentRed.glsl";
-import sunFragmentBlue from "../../starShaders/sunFragmentBlue.glsl";*/
+import sunFragmentRed from "../../starShaders/sunFragmentRed.glsl";
+import sunFragmentBlue from "../../starShaders/sunFragmentBlue.glsl";
 import sunFragmentYellow from "../../starShaders/sunFragmentYellow.glsl";
-/*import sunFragmentOrange from "../../starShaders/sunFragmentOrange.glsl";
+import sunFragmentOrange from "../../starShaders/sunFragmentOrange.glsl";
 import sunFragmentBrown from "../../starShaders/sunFragmentBrown.glsl";
-import sunFragmentWhite from "../../starShaders/sunFragmentWhite.glsl";*/
+import sunFragmentWhite from "../../starShaders/sunFragmentWhite.glsl";
 
 class Scene extends Component {
     constructor(props) {
@@ -41,10 +41,7 @@ class Scene extends Component {
         this.renderer.physicallyCorrectLights = true;
         this.renderer.outputEncoding = THREE.sRGBEncoding;
 
-        this.initStar(this.props.color)
-
     }
-
 
     onWindowResize = () => {
         this.width = window.innerWidth;
@@ -77,35 +74,21 @@ class Scene extends Component {
 
     initStar = (color) => {
 
-        /*let colorSelect = {
-            'blue': sunFragmentBlue,
-            'white': sunFragmentWhite,
-            'yellow': sunFragmentYellow,
-            'orange': sunFragmentOrange,
-            'red': sunFragmentRed,
-            'brown': sunFragmentBrown
-        }*/
-        let star = {
-            'blue': {r:0.5,g:0.6,b:0.9,n:-0.3,o:+0.2},
-            'light-blue': {r:0.7,g:0.8,b:0.9,n:-0.3,o:+0.2},
-            'white': {r:0.9,g:0.9,b:0.9,n:-0.3,o:+0.2},
-            'light-yellow': {r:0.9,g:0.8,b:0.6,n:0.6,o:0.05},
-            'yellow': {r:0.8,g:0.5,b:0.1,n:0.6,o:0.05},
-            'orange': {r:0.6,g:0.30,b:0.05,n:0.6,o:0.05},
-            'red': {r:0.55,g:0.10,b:0.05,n:0.6,o:0.05},
-            'dark-red': {r:0.4,g:0.06,b:0.05,n:0.6,o:0.05},
-            'brown': {r:0.3,g:0.1,b:0.0,n:0.6,o:0.05},
+        let fragment;
+        switch (color) {
+            case 'blue': fragment = sunFragmentBlue; console.log('blue'); break;
+            case 'white': fragment = sunFragmentWhite; console.log('white'); break;
+            case 'yellow': fragment = sunFragmentYellow; console.log('yellow'); break;
+            case 'orange': fragment = sunFragmentOrange; console.log('orange'); break;
+            case 'red': fragment = sunFragmentRed; console.log('red'); break;
+            case 'brown': fragment = sunFragmentBrown; console.log('brown'); break;
+            default:
+                console.log("Bad color");
         }
-        let starVariant = star[color]
 
         let uniforms = {
             time: 	{ type: "f", value: 1.0 },
-            scale: 	{ type: "f", value: 1.5 },
-            r: { type: "f", value: starVariant.r },
-            g :{ type: "f", value: starVariant.g },
-            b :{ type: "f", value: starVariant.b },
-            noiseMult :{ type: "f", value: starVariant.n },
-            offset:{ type: "f", value: starVariant.o },
+            scale: 	{ type: "f", value: 1.5 }
         };
         let material = new THREE.ShaderMaterial( {
             uniforms: uniforms,
@@ -138,15 +121,16 @@ class Scene extends Component {
             delta = 0.001 * ( time - oldTime );
             oldTime = time;
 
-            uniforms.time.value += 0.1 * delta;
-            star.rotation.y += 0.02 * delta;
-            star.rotation.x += 0.005 * delta;
+            if(star){
+                uniforms.time.value += 0.005 * delta;
+                star.rotation.y += 0.02 * delta;
+                star.rotation.x += 0.005 * delta;
+            }
 
 
             cloud.rotateX(0.00008)
             cloud.rotateY(0.00005)
             cloud.rotateZ(0.00003)
-
 
             renderer.render(scene, camera);
 
@@ -155,21 +139,11 @@ class Scene extends Component {
         animate()
     }
 
-    //------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-    //------------------------------------------------------------------------------------------------------------------
-
     render() {
 
         return(
             <div onResize={this.onWindowResize} ref={ref => (this.mount = ref)}>
+
             </div>
 
         );

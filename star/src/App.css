@@ -19,6 +19,7 @@
   height: 98vh;
   align-items: center;
   justify-content: space-around;
+
 }
 
 
@@ -35,5 +36,16 @@
   border-style: solid;
   border-radius: 2px;
   border-color: #1a1a1a;
+}
+
+.wrapper-left{
+    position: relative;
+}
+
+.wrapper-left button{
+  position: absolute;
+  bottom: -3em;
+left: 50%;
+  transform: translateX(-50%);
 }
 
