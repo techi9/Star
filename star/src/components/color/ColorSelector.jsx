@@ -13,22 +13,22 @@ class ColorSelector extends Component{
         this.handleColor='#404040'
         this.borderColor = '#898989'
         this.colorTable=[   '#7cedff',
-                            '#d1f9ff',
+                            /*'#d1f9ff',*/
                             '#fdfdfd',
-                            '#fffac0',
+                            /*'#fffac0',*/
                             '#ffed76',
                             '#ffca4e',
                             '#ff5f46',
-                            '#c64d1f',
+                            /*'#c64d1f',*/
                             '#994d27']
         this.nameTable=['blue',
-                        'light-blue',
+                        /*'light-blue',*/
                         'white',
-                        'light-yellow',
+                        /*'light-yellow',*/
                         'yellow',
                         'orange',
                         'red',
-                        'dark-red',
+                        /*'dark-red',*/
                         'brown']
         this.setColorWheelRef = element => {
             this.colorWheel = element;
@@ -41,10 +41,10 @@ class ColorSelector extends Component{
                 let y = event.clientY - box.top - box.height/2
                 let angle = Math.atan2(y,x)+Math.PI/2
                 let intAngle = Math.floor((angle+0.5*this.sector)/this.sector)
-                if (intAngle<0) intAngle+=9
+                if (intAngle<0) intAngle+=6
 
                 this.animate(this.prevAngle,intAngle,this,()=>{
-                    this.test(this.nameTable[(intAngle+4)%9])
+                    this.test(this.nameTable[(intAngle+2)%6])
                     this.prevAngle = intAngle
                     this.inProgress=false
                 })
@@ -89,7 +89,7 @@ class ColorSelector extends Component{
 
 
     getRadial(angle,radius) {
-        return {x:Math.cos(angle+Math.PI/2)*radius,y:Math.sin(angle+Math.PI/2)*radius}
+        return {x:Math.cos(angle+Math.PI/2+Math.PI/6)*radius,y:Math.sin(angle+Math.PI/2+Math.PI/6)*radius}
     }
     add(vec1,vec2) {
         return {x: vec1.x + vec2.x, y: vec1.y + vec2.y}
@@ -160,7 +160,7 @@ class ColorSelector extends Component{
         let radius = ((this.colorWheel.width)/2)/1.1
         let center = {x:this.colorWheel.width/2,y:this.colorWheel.width/2}
         this.center=center
-        let colors = 9
+        let colors = 6
         let sectors = 5
         let sectorAngle = 2*Math.PI / (colors*sectors)
         this.sector = 2*Math.PI / (colors)
@@ -190,7 +190,7 @@ class ColorSelector extends Component{
             this.drawHandle(ctx,center,radius*0.4,radius*1.1,angle)
             this.drawCircle(ctx,center,radius*0.25,this.handleColor)
             let intAngle = Math.floor((angle+0.5*this.sector)/this.sector)
-            this.drawCircle(ctx,center,radius*0.2,this.colorTable[(intAngle+4)%9])
+            this.drawCircle(ctx,center,radius*0.2,this.colorTable[(intAngle+2)%6])
         }
 
     }
