@@ -3,3 +3,30 @@ html{
     margin: 0;
     background: #c4c4c4;
 }
+
+button{
+    /*background: #403B4A;*/
+    text-align: center;
+    text-transform: uppercase;
+    color: #32323f;
+
+    border: 2px solid rgb(51, 53, 70);
+    filter: drop-shadow(5px 5px 10px rgba(112, 119, 67, 0.2));
+    /*border-radius: 60px;*/
+
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 00;
+    background: transparent;
+
+    height: 3vh;
+    width: 15vw;
+
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #3b3a3a;
+    color: #ffffff;
+}

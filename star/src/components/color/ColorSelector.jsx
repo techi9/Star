@@ -63,7 +63,10 @@ class ColorSelector extends Component{
 
     animate(start,stop,wheel,callback){
         if(!wheel) return
-        if (start===stop) return
+        if (start===stop) {
+            callback()
+            return;
+        }
         this.inProgress=true
         let sigmoid = (x) => 1/(1+Math.exp(-x))
         let dsigmoid = (x) => sigmoid(x)*(1-sigmoid(x))
@@ -198,7 +201,7 @@ class ColorSelector extends Component{
     componentDidMount() {
         this.prevAngle=0
         this.drawColorWheel(0)
-        this.test(this.nameTable[4])
+
     }
 
 

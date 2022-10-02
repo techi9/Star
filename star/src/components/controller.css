@@ -4,8 +4,47 @@
     left: 30px;
 }
 
-.controller{
+.controller {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.card{
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3{
+    align-self: flex-start;
+    margin: 0 0 0 1em;
+}
+
+#results-button{
+    background:  #221d36 !important;
+    color: #ffffff !important;
+}
+
+.end{
+    position: relative;
+}
+
+.end button{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+
 }

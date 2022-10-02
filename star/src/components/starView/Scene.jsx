@@ -17,6 +17,9 @@ class Scene extends Component {
 
         this.initSpace();
 
+        if(this.props.flag){
+            this.initStar(this.props.color);
+        }
     }
 
     initSpace() {
@@ -93,7 +96,7 @@ class Scene extends Component {
         let material = new THREE.ShaderMaterial( {
             uniforms: uniforms,
             vertexShader: sunVertex,
-            fragmentShader: sunFragmentYellow
+            fragmentShader: fragment
         } );
         let size = 0.75;
         this.star = new THREE.Mesh( new THREE.SphereGeometry( size, 64, 32 ), material );
@@ -107,8 +110,13 @@ class Scene extends Component {
         let renderer = this.renderer
         let scene = this.scene
         let cloud = this.cloud
-        let uniforms = this.star.material.uniforms
+
         let star = this.star
+        let uniforms
+        if(this.star){
+            uniforms = this.star.material.uniforms
+        }
+
 
         let oldTime = new Date().getTime();
         let time = 0

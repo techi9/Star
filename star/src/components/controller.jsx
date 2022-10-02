@@ -1,4 +1,4 @@
-import {Component} from "react";
+import {Component, createRef, useRef} from "react";
 import ColorSelector from "./color/ColorSelector";
 import TemperatureBar from "./temperature/TemperatureBar";
 import "./controller.css";
