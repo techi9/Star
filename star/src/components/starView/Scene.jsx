@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 import * as THREE from "three";
+import sunVertex from "../../starShaders/sunVertex.glsl";
+import sunFragmentRed from "../../starShaders/sunFragmentRed.glsl";
+import sunFragmentBlue from "../../starShaders/sunFragmentBlue.glsl";
+import sunFragmentYellow from "../../starShaders/sunFragmentYellow.glsl";
+import sunFragmentOrange from "../../starShaders/sunFragmentOrange.glsl";
+import sunFragmentBrown from "../../starShaders/sunFragmentBrown.glsl";
+import sunFragmentWhite from "../../starShaders/sunFragmentWhite.glsl";
 
 class Scene extends Component {
     constructor(props) {
@@ -27,13 +34,14 @@ class Scene extends Component {
 
         this.starForge();
 
-
-
         this.renderer = new THREE.WebGLRenderer({alpha: true});
         this.renderer.setClearColor(0x000011, 1);
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.renderer.setSize( this.width, this.height);
+        this.renderer.physicallyCorrectLights = true;
+        this.renderer.outputEncoding = THREE.sRGBEncoding;
 
+        this.initStar(this.props.color)
     }
 
 
@@ -66,7 +74,32 @@ class Scene extends Component {
         this.scene.add(this.cloud);
     }
 
+    initStar = (color) => {
 
+        let colorSelect = {
+            'blue': sunFragmentBlue,
+            'white': sunFragmentWhite,
+            'yellow': sunFragmentYellow,
+            'orange': sunFragmentOrange,
+            'red': sunFragmentRed,
+            'brown': sunFragmentBrown
+        }
+
+
+        let uniforms = {
+            time: 	{ type: "f", value: 1.0 },
+            scale: 	{ type: "f", value: 1.5 }
+        };
+        let material = new THREE.ShaderMaterial( {
+            uniforms: uniforms,
+            vertexShader: sunVertex,
+            fragmentShader: sunFragmentYellow
+        } );
+        let size = 0.75;
+        this.star = new THREE.Mesh( new THREE.SphereGeometry( size, 64, 32 ), material );
+        this.star.scale.set(300,300,300)
+        this.scene.add( this.star );
+    }
 
     componentDidMount() {
         this.mount.appendChild(this.renderer.domElement); // mount a scene inside of React using a ref
@@ -74,18 +107,47 @@ class Scene extends Component {
         let renderer = this.renderer
         let scene = this.scene
         let cloud = this.cloud
+        let uniforms = this.star.material.uniforms
+        let star = this.star
+
+        let oldTime = new Date().getTime();
+        let time = 0
+        let delta = 0
 
         let animate = () => {
             requestAnimationFrame(animate);
+
+            time = new Date().getTime();
+            delta = 0.001 * ( time - oldTime );
+            oldTime = time;
+
+            uniforms.time.value += 0.1 * delta;
+            star.rotation.y += 0.02 * delta;
+            star.rotation.x += 0.005 * delta;
+
+
             cloud.rotateX(0.00008)
             cloud.rotateY(0.00005)
             cloud.rotateZ(0.00003)
+
+
             renderer.render(scene, camera);
 
         }
 
         animate()
     }
+
+    //------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+    //------------------------------------------------------------------------------------------------------------------
 
     render() {
 

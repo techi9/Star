@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <div className="star-view">
-        <Scene height={calculateSceneSizes.height} width={calculateSceneSizes.width}/>
+        <Scene color={'white'} height={calculateSceneSizes.height} width={calculateSceneSizes.width}/>
       </div>
 
        <div className="components">
