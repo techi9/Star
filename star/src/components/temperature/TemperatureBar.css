@@ -1,0 +1,76 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 350px;
+    width: 100%;
+}
+
+.progress_line {
+    bottom: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    text-align: center;
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 1rem, #cecece 1rem, #606060 2rem);
+    background-size: 200% 100%;
+    animation: gradient 10s linear infinite;
+}
+
+@keyframes gradient {
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+
+.btn-grad {
+    background-image: linear-gradient(to right, #403B4A 0%, #E7E9BB  51%, #403B4A  100%);
+    margin: 10px;
+    padding: 5px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.progress_line-bg {
+    background-color: #ccc;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    border-color: #1a1a1a;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 8px;
+}
+.cursor {
+    background-color: #ffffff;
+    height: 5%;
+    width: 16px;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+.temperature {
+    background-size: contain;
+    background-image: url("./public/temperature/thermometr2.png");
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    width: 70px;
+    margin-top: 10px;
+}
