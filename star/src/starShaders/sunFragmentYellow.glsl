@@ -1,4 +1,9 @@
 	uniform float time;
+	uniform float r;
+	uniform float g;
+	uniform float b;
+	uniform float noiseMult;
+	uniform float offset;
 
 			varying vec3 vTexCoord3D;
 			varying vec3 vNormal;
@@ -81,12 +86,12 @@
 
 			float heightMap( vec3 coord ) {
 
-				float n = abs( snoise( coord ) );
+				float n =0.25* abs( snoise( coord*3.0 ) );
 
-				n += 0.25   * abs( snoise( coord * 2.0 ) );
-				n += 0.25   * abs( snoise( coord * 4.0 ) );
-				n += 0.125  * abs( snoise( coord * 8.0 ) );
-				n += 0.0625 * abs( snoise( coord * 16.0 ) );
+				n += 0.25   * abs( snoise( coord * 10.0 ) );
+				n += 0.25   * abs( snoise( coord * 20.0 ) );
+				n += 0.0625  * abs( snoise( coord * 40.0 ) );
+				n += 0.0625 * abs( snoise( coord * 800.0 ) );
 
 				return n;
 
@@ -95,8 +100,9 @@
 			void main( void ) {
 
 				float n = heightMap( vTexCoord3D );
-
-				gl_FragColor = vec4( vec3( 1.7 - n, 1.5 - n, 0.5 - n ), 1.0 );
+				float nc=n*noiseMult;
+				gl_FragColor = vec4(r + nc, g + nc,b + nc, 1.0 );
+				gl_FragColor.rgb += vec3( offset,offset,offset );
 
 				const float e = 0.001;
 
