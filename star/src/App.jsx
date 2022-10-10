@@ -11,15 +11,15 @@ function App() {
     }
 
     let colors = [
-        'blue',
-        'white',
-        'yellow',
         'orange',
+        'blue',
+        'yellow',
         'red',
-        'brown'
+        'brown',
+        'white'
     ]
 
-    let [currentStarInd, setCurrentStarInd] = useState(0)
+    let [currentStarInd, setCurrentStarInd] = useState(-1)
     let [flag, setFlag] = useState(false)
 
     let controllerRef = useRef()

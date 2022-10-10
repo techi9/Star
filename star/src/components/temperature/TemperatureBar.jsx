@@ -1,6 +1,9 @@
 import {Component} from "react";
 import "./TemperatureBar.css";
 
+import audioPathIm from "../../assets/loadTemperature.wav";
+import thermometerPath from "../../assets/thermometr2.png";
+
 class TemperatureBar extends Component{
     constructor(props) {
         super(props);
@@ -37,7 +40,7 @@ class TemperatureBar extends Component{
             'brown': [1500,2000]
         }
 
-        let audioPath = "../../public/sounds/loadTemperature.wav";
+        let audioPath = audioPathIm;
         this.audio = new Audio(audioPath);
     }
 
@@ -104,7 +107,7 @@ class TemperatureBar extends Component{
                 {/*        </div>*/}
                 {/*    </div>*/}
                 {/*</div>*/}
-                <div className="temperature">
+                <div className="temperature" style={{background: "url(" + thermometerPath + ")",  backgroundSize: "contain"}}>
                     <div className="cursor" id="cursor" style={{
                         height: this.state.widthCursor+'%'
                     }}></div>
